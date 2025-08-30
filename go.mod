@@ -1,3 +1,3 @@
-module github.com/vr33ni-dev/db-compose-agent
+module github.com/vr33ni-dev/compose-db-agent
 
 go 1.24

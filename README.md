@@ -139,4 +139,4 @@ The agent injects env from APP_ENV_FILE and runs with --project-directory $APP_D
 
 ---
 
-> **Note:** The canonical repository is [**on GitHub**](https://github.com/vr33ni-dev/db-compose-agent) · [Mirror on GitLab →](https://gitlab.com/vr33ni-personal/db-compose-agent.git) [![Mirror Status](https://github.com/vr33ni-dev/db-compose-agent/actions/workflows/mirror.yml/badge.svg)](https://github.com/vr33ni-dev/db-compose-agent/actions/workflows/mirror.yml)
+> **Note:** The canonical repository is [**on GitHub**](https://github.com/vr33ni-dev/compose-db-agent) · [Mirror on GitLab →](https://gitlab.com/vr33ni-personal/compose-db-agent.git) [![Mirror Status](https://github.com/vr33ni-dev/compose-db-agent/actions/workflows/mirror.yml/badge.svg)](https://github.com/vr33ni-dev/ompose-db-agent/actions/workflows/mirror.yml)
