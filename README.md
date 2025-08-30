@@ -108,7 +108,6 @@ go build -o compose-db-agent
 ## What the agent actually does (DB-scoped)
 
 - Up: ``docker compose -p $PROJECT -f $COMPOSE_FILE up -d $DB_SERVICE`` → wait until health is healthy.
-
 - Down: … stop $DB_SERVICE → … rm -f $DB_SERVICE (leaves other services alone).
 - Down + delete volume: same as above, then docker volume rm ``<PROJECT>``_``<DB_VOLUME>``.
 - Reset: down + delete volume → up DB again → wait healthy → optional seed command.
