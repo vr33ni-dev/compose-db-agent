@@ -42,7 +42,7 @@ APP_ENV_FILE=../skillswap/.env     # app's .env with POSTGRES_*
 ANTHROPIC_MODEL=claude-sonnet-4-20250514
 ENSURE_DOCKER_AUTO=1               # 1/unset=auto-start Colima; 0=don't
 ENV=development                    # if 'production', agent refuses to run
-
+```
 
 ---
 > **Note:** The canonical repository is [**on GitHub**](https://github.com/vr33ni-dev/skill-swap-agent) · [Mirror on GitLab →](https://gitlab.com/vr33ni-personal/skill-swap-agent.git) [![Mirror Status](https://github.com/vr33ni-dev/skill-swap-agent/actions/workflows/mirror.yml/badge.svg)](https://github.com/vr33ni-dev/skill-swap-agent/actions/workflows/mirror.yml)
