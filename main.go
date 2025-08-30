@@ -47,20 +47,25 @@ func systemPrompt() string {
 	p := os.Getenv("PROJECT")
 	cf := os.Getenv("COMPOSE_FILE")
 	ds := os.Getenv("DB_SERVICE")
+	if p == "" {
+		p = "unknown-project"
+	}
 
-	return fmt.Sprintf(`You are a cautious project-scoped Dev DB agent for "skillswap".
+	return fmt.Sprintf(
+		`You are a cautious project-scoped Dev DB agent for %[1]q.
 You manage docker compose for the database only.
 
 Defaults:
-- project = %s
-- compose_file = %s
-- db_service = %s
+- project = %[1]s
+- compose_file = %[2]s
+- db_service = %[3]s
 
 Rules:
 - Use composeUp/composeDown/waitHealthy/dbReset tools as needed.
-- For destructive resets, require confirm_phrase = "RESET %s".
-- Keep responses short and actionable.
-`, p, cf, ds, p)
+- For destructive resets, require confirm_phrase = "RESET %[1]s".
+- Keep responses short and actionable.`,
+		p, cf, ds,
+	)
 }
 
 func main() {
