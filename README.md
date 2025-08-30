@@ -110,11 +110,8 @@ go build -o compose-db-agent
 - Up: ``docker compose -p $PROJECT -f $COMPOSE_FILE up -d $DB_SERVICE`` → wait until health is healthy.
 
 - Down: … stop $DB_SERVICE → … rm -f $DB_SERVICE (leaves other services alone).
-
 - Down + delete volume: same as above, then docker volume rm ``<PROJECT>``_``<DB_VOLUME>``.
-
 - Reset: down + delete volume → up DB again → wait healthy → optional seed command.
-
 - Logs: docker logs --tail N <container id of $DB_SERVICE>.
 
 The agent injects env from APP_ENV_FILE and runs with --project-directory $APP_DIR, so Compose variable substitution behaves as if you ran from the app repo.
@@ -124,11 +121,8 @@ The agent injects env from APP_ENV_FILE and runs with --project-directory $APP_D
 ## Troubleshooting
 
 - Go tool mismatch (version "go1.24.5" does not match "go1.24.2"): use one toolchain (prefer devenv/Nix), set go 1.24 in go.mod, run go clean -cache -modcache, ensure which -a go shows a single install.
-
 - Docker not running: agent will try colima start if ENSURE_DOCKER_AUTO != 0. Check docker info, colima status.
-
 - DB never healthy: verify the healthcheck in compose and that POSTGRES_* in APP_ENV_FILE are non-empty.
-
 - “disallowed path” error: ensure COMPOSE_FILE in env matches the path you’re passing (especially with ..).
 
 - Can’t delete volume: confirm the calculated name: ```docker volume ls | grep "<PROJECT>_<DB_VOLUME>"```.
@@ -138,13 +132,9 @@ The agent injects env from APP_ENV_FILE and runs with --project-directory $APP_D
 ## Why not just shell scripts?
 
 - Safer (confirmation for destructive ops, project/path validation, prod guard)
-
 - Smarter UX (natural language → curated tools only)
-
 - Self-healing (auto-starts Colima)
-
 - Deterministic (consistent flags, env injection, health wait)
-
 - Auditable & Extensible (easy to add more tools later; DRY_RUN supported)
 
 ---
