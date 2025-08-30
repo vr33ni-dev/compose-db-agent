@@ -123,7 +123,6 @@ The agent injects env from APP_ENV_FILE and runs with --project-directory $APP_D
 - Docker not running: agent will try colima start if ENSURE_DOCKER_AUTO != 0. Check docker info, colima status.
 - DB never healthy: verify the healthcheck in compose and that POSTGRES_* in APP_ENV_FILE are non-empty.
 - “disallowed path” error: ensure COMPOSE_FILE in env matches the path you’re passing (especially with ..).
-
 - Can’t delete volume: confirm the calculated name: ```docker volume ls | grep "<PROJECT>_<DB_VOLUME>"```.
 
 ---
