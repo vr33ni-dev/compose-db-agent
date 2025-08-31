@@ -1,4 +1,3 @@
-# .github/workflows/gitlab-delete-on-merge.yml
 name: Delete branch on GitLab (PR merge)
 on:
   pull_request:

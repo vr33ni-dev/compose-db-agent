@@ -1,4 +1,3 @@
-# .github/workflows/mirror-to-gitlab.yml
 name: Mirror to GitLab
 on:
   push:
