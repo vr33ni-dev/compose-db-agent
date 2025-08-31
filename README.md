@@ -5,7 +5,7 @@ You type natural language (e.g., “ramp up db”, “reset (confirm: RESET mypr
 
 ---
 
-## Why this exists (use cases)
+## Use cases
 
 The database is the riskiest shared state in local dev. This agent gives you a single, natural-language entry point that consistently:
 
